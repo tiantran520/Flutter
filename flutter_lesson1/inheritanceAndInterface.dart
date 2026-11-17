@@ -71,3 +71,33 @@ class Cash implements Payable {
     print('Thanh toán bằng tiền mặt');
   }
 }
+
+// abstract class – Class trừu tượng
+/*
+  một abstract class là một class không thể được khởi tạo trực tiếp và thường được sử dụng làm lớp cơ sở cho các lớp con.
+  Abstract class có thể chứa các phương thức trừu tượng (abstract methods) mà không có phần thân (body), và các lớp con phải triển khai các phương thức này.
+  Abstract class giúp định nghĩa các hành vi chung mà các lớp con phải tuân theo,
+  đồng thời cho phép chia sẻ mã nguồn giữa các lớp con thông qua các phương thức và thuộc tính được định nghĩa trong abstract class.
+  Abstract class có thể chứa cả phương thức trừu tượng và phương thức có phần thân, cho phép các lớp con kế thừa và sử dụng
+*/
+// Ví dụ về abstract class trong Dart
+abstract class Shape {
+  double calculateArea (); // Phương thức trừu tượng để tính diện tích
+
+  void describe() {
+    print('Đây là một hình học.');
+  }
+}
+
+class Circle extends Shape {
+  double radius;
+
+  Circle(this.radius);
+// Override phương thức calculateArea() để tính diện tích hình tròn
+// Ghi đè phương thức  là một tính năng trong lập trình hướng đối tượng cho phép lớp con cung cấp một triển khai cụ thể cho một phương thức đã được định nghĩa trong lớp cha.
+  @override
+  double calculateArea() {
+    return 3.14 * radius * radius;
+  }
+}
+
