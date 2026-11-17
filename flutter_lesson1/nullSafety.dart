@@ -33,5 +33,10 @@ void main() {
   String? nullableStringToAssign = null;
   nullableStringToAssign ??= 'Giá trị được gán';
   print('Giá trị của nullableStringToAssign: $nullableStringToAssign'); // Output: Giá trị của nullableStringToAssign: Giá trị được gán
+  // 5 late trong Dart: Từ khóa late được sử dụng để khai báo một biến mà giá trị của nó sẽ được gán sau khi biến được khai báo. Điều này hữu ích khi bạn muốn trì hoãn việc khởi tạo một biến cho đến khi nó thực sự cần thiết, nhưng vẫn muốn đảm bảo rằng biến đó sẽ được khởi tạo trước khi sử dụng.
+  // Ví dụ về late
+  late String bienLate;
 
+  bienLate = 'Late khai bao';
+  print(bienLate);
 }
