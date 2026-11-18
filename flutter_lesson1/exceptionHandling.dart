@@ -12,7 +12,7 @@ void main() {
     print('Stack Trace: $stackTrace');
   }
 
-  // Bai 2 Try - On bat mot loi cu the
+  //2. Try - On bat mot loi cu the
    try {
     int result = 10 ~/ 0;
 
@@ -40,6 +40,8 @@ void main() {
   } catch (e) {
     print('Lỗi: $e');
   }
+
+  // 3 Custom Exception
 }
 
 // viết func ném ra lỗi throw

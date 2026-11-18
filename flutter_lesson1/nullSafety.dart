@@ -24,7 +24,7 @@ void main() {
   //2. Toán tử ! (null-assertion operator): Được sử dụng để ép kiểu một biến nullable thành non-nullable. Khi sử dụng toán tử !, bạn đang nói với trình biên dịch rằng bạn chắc chắn biến đó không phải là null tại thời điểm sử dụng. Nếu biến thực sự là null, sẽ gây ra lỗi runtime.
   // Nhược điểm của toán tử ! là nếu bạn sử dụng nó một cách không cẩn thận, có thể dẫn đến lỗi runtime. Do đó, nên sử dụng toán tử ! chỉ khi bạn chắc chắn rằng biến không thể là null.
   String? anotherNullableString = 'Hello, Dart!';
-  print('Độ dài của anotherNullableString: ${anotherNullableString!.length}'); // Output: Độ dài của anotherNullableString: 12    
+  print('Độ dài của anotherNullableString: ${anotherNullableString.length}'); // Output: Độ dài của anotherNullableString: 12    
   // 3. Toán tử ?? (null-coalescing operator): Được sử dụng để cung cấp một giá trị mặc định nếu biến nullable là null. Nếu biến không phải là null, giá trị của biến sẽ được sử dụng.
   String? yetAnotherNullableString = null;
   String result = yetAnotherNullableString ?? 'Giá trị mặc định';
